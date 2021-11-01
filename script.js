@@ -5,10 +5,9 @@ let apellido = prompt("Ingrese su apellido");
 
 console.log ("Hola, " +nombre+ " " +apellido);
 
-let saludo = prompt("Como has estado? " +nombre+" "+ apellido);
-console.log(saludo);
+prompt("Como has estado? " +nombre+" "+ apellido);
 
-let suma =  parseInt(prompt("Asi que " +saludo+ ". Ahora, diganos su edad"));
+let suma =  parseInt(prompt("Ahora, diganos su edad"));
 alert (suma + ". Por ultimo le vamos a sumar 21");
 
 let resultado = parseInt( suma + 21 )
