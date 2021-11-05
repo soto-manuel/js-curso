@@ -14,7 +14,7 @@ if (((usuarioIngresado === "Cami") || usuarioIngresado === "CAMI") || usuarioIng
                     alert("Lo vamos a multiplicar por 5");
                     alert(resultado);
                 } else{
-                    let resultadoSegundo = alert("Lo vamos a dividir por "+numeroIngresado);
+                    alert("Lo vamos a dividir por "+numeroIngresado);
                     alert("1");
                 }
         } else{
