@@ -1,18 +1,28 @@
 console.log("INICIO");
 
-let nombre = prompt("Ingrese su nombre");
-let apellido = prompt("Ingrese su apellido");
+let usuarioIngresado = prompt("Ingrese su nombre: ");
 
-console.log ("Hola, " +nombre+ " " +apellido);
 
-prompt("Como has estado? " +nombre+" "+ apellido);
-
-let suma =  parseInt(prompt("Ahora, diganos su edad"));
-alert (suma + ". Por ultimo le vamos a sumar 21");
-
-let resultado = parseInt( suma + 21 )
-
-console.log(resultado);
-alert(resultado);
+if (((usuarioIngresado === "Cami") || usuarioIngresado === "CAMI") || usuarioIngresado === "cami") {
+    alert("Buenos dias, tardes o noche, Cami, CAMI o cami :)");
+    let edadIngresada = prompt("ingrese su edad");{
+        if(edadIngresada >= 20){
+            alert("Sos mayor de 20 años, genial. Sigamos...");
+            let numeroIngresado = prompt("Elegí un numero del 1 al 10")
+            let resultado = numeroIngresado * 5
+                if (numeroIngresado > 5){
+                    alert("Lo vamos a multiplicar por 5");
+                    alert(resultado);
+                } else{
+                    let resultadoSegundo = alert("Lo vamos a dividir por "+numeroIngresado);
+                    alert("1");
+                }
+        } else{
+            alert("Esperaba que seas mayor jejej")
+        }
+    }
+} else{
+    alert("No sos mi tutora");
+}
 
 console.log("FIN");
