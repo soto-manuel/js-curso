@@ -35,26 +35,33 @@ console.log("INICIO");
 // ingresarDatos()
 // alerta()
 
-
-class Producto {
-    constructor(nombre, precio) {
-        this.nombre  = nombre.toUpperCase();
-        this.precio  = parseFloat(precio);
-        this.vendido = false;
+class libros {
+    constructor(nombre, genero, editorial, autor){
+        this.nombre = nombre;
+        this.genero = genero;
+        this.editorial = editorial;
+        this.autor = autor;
     }
-    sumaIva() {
-        this.precio = this.precio * 1.21;
-    }
-    vender() {
-        this.vendido = true;
+    disponibilidad(){
+        this.disponible = true;
     }
 }
-const producto1 = new Producto("arroz", "125");
-const producto2 = new Producto("fideo", "50");
-producto1.sumaIva();
-producto2.sumaIva();
-producto2.vender();
 
-console.log(producto1)
-console.log(producto2)
+const libroUno = new libros ("Peter Pan", "Fantástico", "Terramar", "James M. Barrie")
+
+const libroDos = new libros ("El Sabueso de los Baskerville", "Policiales", "Terramar", "Arthur Conan Doyle")
+
+const libroTres = new libros ("Las aventuras de Tom Sawyer", "Estrada", "Novela infantil", "versión de Nicolas Schuff")
+
+
+console.log(libroUno.disponibilidad)
+console.log(libroUno)
+
+console.log(libroDos.disponibilidad)
+console.log(libroDos)
+
+console.log(libroTres.disponibilidad)
+console.log(libroTres)
+
+
 console.log("FIN")
