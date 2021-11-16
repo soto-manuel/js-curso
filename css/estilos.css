@@ -1,0 +1,55 @@
+html body{
+    background-color: white;
+}
+
+
+nav{
+    font-size: 1.2rem;
+}
+nav div a h1{
+    margin-left: 1rem;
+}
+nav div div ul li{
+    margin: 0rem 1rem;
+}
+.seccion-index{
+    background-color: #1b345b;
+}
+
+.tamaño-img-index{
+    margin: 5rem 0rem;
+}
+/* .img-locker{
+    height: 26rem;
+    width: 28rem;
+} */
+.titulo-caja{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.titulos-index{
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    height: 4rem;
+    margin: 1rem 1rem 1rem 1rem;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.section-carrusel{
+    margin-top: 1rem;
+    background-color: white;
+}
+.tamaño-carrusel{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.carrusel-index{
+    width: 50rem;
+    height: 28rem;
+}

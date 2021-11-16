@@ -5,13 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CURSO JS</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilos.css"> 
 </head>
-<body>
-        <h1>Titulo</h1>
-        <div>
-            <p>Aprendiendo a usar JS</p>
-        </div>
 
-    <script src="./script.js"></script>
+<body>
+        <header>
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./images/SAFE-OS.png" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end w-100">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Create account</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Section 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Section 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </header>
+
+        <main>
+
+                <section class="col-12 col-sm-12 seccion-index">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 text-center tamaño-img-index">
+                            <img class="img-locker" src="./images/lock-png.png" alt="Seguridad de Candado">
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12 titulo-caja">
+                            <div class="bg-primary titulos-index">
+                                <p>Cansado de dar tus datos personales, confia en TITULO</p>
+                            </div>
+                            <div class="bg-primary titulos-index">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="col-12 col-sm-12 w-100 section-carrusel">
+                    <div class="tamaño-carrusel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner carrusel-index">
+                                <div class="carousel-item">
+                                <img src="./images/carrousel-1.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="./images/carrousel-2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="./images/carrousel-3.png" class="d-block w-100" alt="...">
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+
+
+        </main>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
