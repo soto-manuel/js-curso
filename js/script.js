@@ -66,11 +66,11 @@ libroTres.vendido;
 libroUno.vendido;
 
 
-let caretes = productos.filter((b) => b.precio > 600)
-console.log(caretes)
+let caretes = productos.filter((b) => b.precio > 600);
+console.log(caretes);
 
-let generoFantastico = productos.filter((f) => f.genero === "Fantástico")
-console.log(generoFantastico)
+let generoFantastico = productos.filter((f) => f.genero === "Fantástico");
+console.log(generoFantastico);
 
 
-console.log("FIN")
+console.log("FIN");
