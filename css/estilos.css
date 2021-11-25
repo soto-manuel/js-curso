@@ -34,7 +34,7 @@ nav div div ul li{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     height: 4rem;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 0rem;
     text-align: justify;
     justify-content: center;
     align-items: center;
@@ -52,4 +52,19 @@ nav div div ul li{
 .carrusel-index{
     width: 50rem;
     height: 28rem;
+}
+
+
+
+
+
+/*       PAGINA CREAR CUENTA      */
+
+
+.titulo-principal{
+    text-align: center;
+    margin: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
