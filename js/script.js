@@ -1,4 +1,4 @@
-console.log("INICIO");
+
 
 
 function bienvenida() {
@@ -8,25 +8,26 @@ function bienvenida() {
 
 
 function ingresarDatos() {
-    let usuario = prompt ("Ingrese su nombre: ")
+    let usuario = prompt ("Ingrese su nombre: ");
+    localStorage.setItem("nombre", usuario);
 
     while (usuario === ""){
-        usuario = prompt("Ingrese un nombre valido")
+        usuario = prompt("Ingrese un nombre valido");
+        
     }
 
-    let contraseñaIngresada = prompt("Ingrese una clave: ")
+    let contraseñaIngresada = prompt("Ingrese una clave: ");
+    localStorage.setItem("contraseña", contraseñaIngresada);
 
     while (contraseñaIngresada === "") {
-        contraseñaIngresada = prompt("Ingrese una clave valida ")
+        contraseñaIngresada = prompt("Ingrese una clave valida ");
     } 
-    let contraseñaReIngresada = prompt("Vuelva a ingresar su clave: ") 
+    let contraseñaReIngresada = prompt("Vuelva a ingresar su clave: ");
 
     while (contraseñaReIngresada !== contraseñaIngresada){
         contraseñaReIngresada = prompt("Contraseña incorrecta, intente nuevamente")
-
     }
-        alert("Contraseña valida");
-
+    alert("Contraseña valida");
 }
 
 function alerta() {
@@ -35,12 +36,25 @@ function alerta() {
 
 
 
-bienvenida()
-ingresarDatos()
-alerta()
+// // bienvenida()
+// ingresarDatos()
+// // alerta()
+
+
+let contraseña = document.getElementById('contraseñaAlmacenada');
+let regresar = document.getElementById('reiniciar')
+
+let enviar = document.getElementById('enviado')
 
 
 
+function enviado (){
+    let crear = document.createElement("div");
+    crear.innerHTML = `<input type="number"`;
+    document.body.appendChild(crear);
+}
+
+enviar.enviado()
 
 // class Libros {
 //     constructor(nombre, genero, editorial, autor, precio){
@@ -84,15 +98,12 @@ alerta()
 
 
 
-// let boton = document.getElementById("btn-section");
+// // let boton = document.getElementById("btn-section");
 
-// boton.onclick = () => {
-//     console.log("aprete el boton")
-// }
+// // boton.onclick = () => {
+// //     console.log("aprete el boton")
+// // }
 
 // let btnClean = document.getElementById("btn-clean")
 
 
-
-
-console.log("FIN");

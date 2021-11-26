@@ -55,19 +55,24 @@
                 <form action="" class="formulario">
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="name-surname">
+                        <input type="text" class="form-control eliminar" id="floatingInput nombreUsuario" placeholder="name-surname">
                         <label for="floatingInput">$nametag</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="password" class="form-control" id="floatingInput contraseñaIngresada" placeholder="password">
                         <label for="floatingInput">Contraseña</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control eliminar" id="floatingInput" placeholder="password">
+                        <label for="floatingInput">Escriba nuevamente la contraseña</label>
                     </div>
 
                     <div class="text-center mb-3">
 
-                        <button type="button" id="btn-clean" class="btn btn-lg btn-secondary">Reestablecer</button>
-                        <button type="button" class="btn btn-lg btn-primary">Enviar</button>
+                        <button type="reset"  class="btn btn-lg btn-secondary">Reiniciar</button>
+                        <button type="submit" id="enviado" class="btn btn-lg btn-primary">Enviar</button>
 
                     </div>
 
@@ -83,3 +88,7 @@
     <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
