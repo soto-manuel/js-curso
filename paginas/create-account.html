@@ -46,13 +46,13 @@
 
         <article class="titulo-principal">
             <div>
-                <h2>REGISTRARSE</h2>
+                <h2 id="mouseAnima">REGISTRARSE</h2>
             </div>
         </article>
 
         <section class="row justify-content-center">
             <div class="col-4 col-lg-5">
-                <form action="" class="formulario">
+                <form action="" id="formID" class="formulario">
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control eliminar" id="floatingInput nombreUsuario" placeholder="name-surname">
@@ -69,10 +69,10 @@
                         <label for="floatingInput">Escriba nuevamente la contraseña</label>
                     </div>
 
-                    <div class="text-center mb-3">
+                    <div id="botones" class="text-center mb-3">
 
-                        <button type="reset"  class="btn btn-lg btn-secondary">Reiniciar</button>
-                        <button type="submit" id="enviado" class="btn btn-lg btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-lg btn-secondary">Reiniciar</button>
+                        <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
 
                     </div>
 
@@ -84,8 +84,9 @@
     </main>
 
 
-    <script src="../js/script.js"></script>
+    
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
 

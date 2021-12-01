@@ -1,60 +1,67 @@
+console.log("INICIO")
 
+let usuario = "";
 
+//  function ingresarDatos() {
 
-function bienvenida() {
-    let saludo = prompt("Buenas ¿Qué día es hoy?");
-    console.log("Genial, hoy es " + saludo + ". Bienvenidx");
-}
-
-
-function ingresarDatos() {
-    let usuario = prompt ("Ingrese su nombre: ");
+    usuario = prompt ("Ingrese su nombre: ");
     localStorage.setItem("nombre", usuario);
 
-    while (usuario === ""){
-        usuario = prompt("Ingrese un nombre valido");
+    // while (usuario === ""){
+    //     usuario = prompt("Ingrese un nombre valido");
         
-    }
+    // }
 
-    let contraseñaIngresada = prompt("Ingrese una clave: ");
-    localStorage.setItem("contraseña", contraseñaIngresada);
+//     let contraseñaIngresada = prompt("Ingrese una clave: ");
+//     localStorage.setItem("contraseña", contraseñaIngresada);
 
-    while (contraseñaIngresada === "") {
-        contraseñaIngresada = prompt("Ingrese una clave valida ");
-    } 
-    let contraseñaReIngresada = prompt("Vuelva a ingresar su clave: ");
+//     while (contraseñaIngresada === "") {
+//         contraseñaIngresada = prompt("Ingrese una clave valida ");
+//     } 
+//     let contraseñaReIngresada = prompt("Vuelva a ingresar su clave: ");
 
-    while (contraseñaReIngresada !== contraseñaIngresada){
-        contraseñaReIngresada = prompt("Contraseña incorrecta, intente nuevamente")
-    }
-    alert("Contraseña valida");
-}
-
-function alerta() {
-    alert("Nunca comparta su clave con nadie, menos con nosotros");
-}
+//     while (contraseñaReIngresada !== contraseñaIngresada){
+//         contraseñaReIngresada = prompt("Contraseña incorrecta, intente nuevamente")
+//     }
+//     alert("Contraseña valida");
+// }
 
 
-
-// // bienvenida()
 // ingresarDatos()
-// // alerta()
+// usuario = localStorage.getItem("nombre");
+// alert("hola " + usuario);
+
+// localStorage.setItem("usuario", usuario)
 
 
 let contraseña = document.getElementById('contraseñaAlmacenada');
-let regresar = document.getElementById('reiniciar')
+let regresar = document.getElementById('reiniciar');
 
-let enviar = document.getElementById('enviado')
+let formID = document.getElementById('formID');
 
-
-
-function enviado (){
+function enviado (e){
+    e.preventDefault()
     let crear = document.createElement("div");
-    crear.innerHTML = `<input type="number"`;
+    crear.innerHTML = '<input type="text">';
     document.body.appendChild(crear);
 }
 
-enviar.enviado()
+formID.addEventListener("submit", enviado)
+
+
+function resetear (e){
+    console.log("testeo")
+}
+
+        regresar.addEventListener("reset", resetear)
+
+// NO ENTIENDO PORQUE NO ME TOMA EL AGREGAR EL EVENTO...
+
+
+let mouseAnima = document.getElementById("mouseAnima");
+
+mouseAnima.onmouseover = () => console.log("pasaste arriba");
+
 
 // class Libros {
 //     constructor(nombre, genero, editorial, autor, precio){
@@ -93,17 +100,21 @@ enviar.enviado()
 // let generoFantastico = productos.filter((f) => f.genero === "Fantástico");
 // console.log(generoFantastico);
 
+// function numeroRandom(){
+//     return Math.random();
+// }
+
+// numeroRandom();
+// console.log(numeroRandom(1, 1001))
 
 
 
 
+// let boton = document.getElementById("btn-section");
 
-// // let boton = document.getElementById("btn-section");
-
-// // boton.onclick = () => {
-// //     console.log("aprete el boton")
-// // }
+// boton.onclick = () => console.log("aprete el boton")
 
 // let btnClean = document.getElementById("btn-clean")
 
 
+console.log("FIN")
