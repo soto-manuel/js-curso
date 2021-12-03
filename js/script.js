@@ -1,11 +1,10 @@
 console.log("INICIO")
 
-let usuario = "";
 
 //  function ingresarDatos() {
 
-    usuario = prompt ("Ingrese su nombre: ");
-    localStorage.setItem("nombre", usuario);
+    // usuario = prompt ("Ingrese su nombre: ");
+    // localStorage.setItem("nombre", usuario);
 
     // while (usuario === ""){
     //     usuario = prompt("Ingrese un nombre valido");
@@ -31,36 +30,77 @@ let usuario = "";
 // usuario = localStorage.getItem("nombre");
 // alert("hola " + usuario);
 
-// localStorage.setItem("usuario", usuario)
 
 
-let contraseña = document.getElementById('contraseñaAlmacenada');
+
 let regresar = document.getElementById('reiniciar');
-
 let formID = document.getElementById('formID');
+
+const usuarioS = []
 
 function enviado (e){
     e.preventDefault()
-    let crear = document.createElement("div");
-    crear.innerHTML = '<input type="text">';
-    document.body.appendChild(crear);
+
+    const nameTag = document.getElementById('nameTag').value
+    const password = document.getElementById('password').value
+
+    localStorage.getItem('nameTag');
+    let nombre = JSON.stringify(nameTag);
+    localStorage.setItem('usuario', nombre);
+
+    localStorage.getItem('password');
+    let contra = JSON.stringify(password);
+    localStorage.setItem('contraseña', contra);
+
+    usuarioS.push(nameTag, password);
+
+    let botones = document.getElementById("divBotones");
+    let btnFin = document.createElement('button');
+    btnFin.innerHTML = 'Vamos';
+    botones.appendChild(btnFin);
+    btnFin.onclick = function(){
+        btnFin.style.color = "white";
+        btnFin.style.background = "#0d6efd";
+        btnFin.script = '../paginas/usuarios.html';
+        btnFin.style.borderRadius = "3px";
+        btnFin.style.borderColor = "#0d6efd";
+        btnFin.style.padding = "0.5rem 1rem";
+    }
+
 }
+
 
 formID.addEventListener("submit", enviado)
 
 
-function resetear (e){
+function resetear (){
     console.log("testeo")
 }
+regresar.addEventListener("reset", resetear)
 
-        regresar.addEventListener("reset", resetear)
-
-// NO ENTIENDO PORQUE NO ME TOMA EL AGREGAR EL EVENTO...
+/// EN PROCESO ....
 
 
-let mouseAnima = document.getElementById("mouseAnima");
+// const usuarioS = []
 
-mouseAnima.onmouseover = () => console.log("pasaste arriba");
+// let listaUsuarios = document.getElementById("listaUser")
+
+// function usuarios (){
+//     usuarioS.forEach((user) => {
+//         console.log(usuarioS)
+//     })
+// }
+
+// listaUsuarios.addEventListener("lista", usuarios)
+
+
+
+
+
+
+
+// let mouseAnima = document.getElementById("mouseAnima");
+// mouseAnima.onmouseover = () => console.log("pasaste arriba");
 
 
 // class Libros {
