@@ -55,24 +55,24 @@
                 <form action="" id="formID" class="formulario">
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control floatingInput" id="nameTag" placeholder="name-surname">
+                        <input type="text" class="form-control" id="nameTag" placeholder="name-surname">
                         <label for="floatingInput">$nametag</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control floatingInput" placeholder="password">
+                        <input type="password" class="form-control" id="password" placeholder="password">
                         <label for="floatingInput">Contraseña</label>
                     </div>
 
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control floatingInput" id="password" placeholder="password">
+                    <div class="form-floating mb-3" id="intentarNuevamente">
+                        <input type="password" class="form-control" id="passwordDos" placeholder="password">
                         <label for="floatingInput">Escriba nuevamente la contraseña</label>
                     </div>
 
                     <div id="divBotones" class="text-center mb-3 ">
 
                         <button type="reset" id="reiniciar" class="btn btn-lg btn-secondary">Reiniciar</button>
-                        <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
+                        <button type="submit" id="cambiaBoton" class="btn btn-lg btn-primary">Enviar</button>
 
                     </div>
 
@@ -83,10 +83,11 @@
 
     </main>
 
-
-    
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    
+    
 </body>
 </html>
 
