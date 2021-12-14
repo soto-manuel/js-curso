@@ -1,29 +1,4 @@
-    console.log("INICIO")
-
-
-//  function ingresarDatos() {
-
-    // usuario = prompt ("Ingrese su nombre: ");
-    // localStorage.setItem("nombre", usuario);
-
-    // while (usuario === ""){
-    //     usuario = prompt("Ingrese un nombre valido");
-        
-    // }
-
-//     let contraseñaIngresada = prompt("Ingrese una clave: ");
-//     localStorage.setItem("contraseña", contraseñaIngresada);
-
-//     while (contraseñaIngresada === "") {
-//         contraseñaIngresada = prompt("Ingrese una clave valida ");
-//     } 
-//     let contraseñaReIngresada = prompt("Vuelva a ingresar su clave: ");
-
-//     while (contraseñaReIngresada !== contraseñaIngresada){
-//         contraseñaReIngresada = prompt("Contraseña incorrecta, intente nuevamente")
-//     }
-//     alert("Contraseña valida");
-// }
+    console.log("INICIO");
 
 
 const usuarioRegistrado = []
@@ -40,58 +15,39 @@ function enviado (e){
     const passwordDos = document.getElementById('passwordDos').value
 
     if(passwordDos!==password){
-        $("#intentarNuevamente").prepend('<p class="remove" style="color: red;"> No coinciden las contraseñas </p>')
-    } else {
-        
-        // localStorage.getItem('nameTag');
-
-        let nombre = JSON.stringify(nameTag);
-        localStorage.setItem('usuario', nombre);
-        
-        // localStorage.getItem('password');
-
-        let contra = JSON.stringify(password);
-        localStorage.setItem('contraseña', contra);
-
-        usuarioRegistrado.push(nombre);
-        mostrarUsuariosRegistrados(usuarioRegistrado)
+        $("#intentarNuevamente")[0].innerHTML = '<p class="remove" style="color: red;"> No coinciden las contraseñas </p>'
     }
 
-$("#divBotones").prepend('<button id=btnFin><a href="./usuarios.html" style="text-decoration:none; color:white;">Vamos</a></button>')
+    else if((nameTag === "")||(password=== "")||(passwordDos==="")){
+        $("#intentarNuevamente")[0].innerHTML = '<p style="color:red;"> No deje espacios en blanco </p>'
+    } else{
 
-$("#cambiaBoton").on("click", function () {
-        $("#btnFin").addClass('btn');
-        $("#btnFin").addClass('btn-lg');
-        $("#btnFin").addClass('btn-danger');
-    })
+        let usuario = {nameTag, password}
+        let storageArray = JSON.parse(localStorage.getItem("usuarios"))
+        if(storageArray){
+            storageArray.push(usuario);
+            localStorage.setItem('usuarios', JSON.stringify(storageArray));
+        } else{
+            let array2 = []
+            array2.push(usuario);
+            localStorage.setItem('usuarios', JSON.stringify(array2));
+        }
+        
+        // Swal.fire(
+        //     'Good job!',
+        //     'You clicked the button!',
+        //     'success'
+        // );
+
+        location.pathname = "/paginas/usuarios.html";
+    }
+
 }
 
-formID.addEventListener("submit", enviado);
-
-
-
-function resetear (){
-    console.log("testeo")
-}
-// regresar.addEventListener("reset", resetear)
+$("#formID").submit(enviado);
 
 
 
 
-/// EN PROCESO ....
 
-
-
-function mostrarUsuariosRegistrados (printUsers){
-    printUsers.forEach( user => {
-        $("#listaUser").innerHTML += `
-            <h2> Lista de usuarios </h2>
-            <ol>
-                <li> ${usuarioRegistrado} </li>
-            </ol>
-        `
-    })                  // USAR FOR ACA ------ CREO NO FUNCIONA IGUAL
-}
-
-
-console.log("FIN")
+    console.log("FIN");
