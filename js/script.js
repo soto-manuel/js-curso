@@ -1,7 +1,7 @@
     console.log("INICIO");
 
 
-const usuarioRegistrado = []
+// const usuarioRegistrado = []
 
 
 let regresar = document.getElementById('reiniciar');
@@ -33,11 +33,13 @@ function enviado (e){
             localStorage.setItem('usuarios', JSON.stringify(array2));
         }
         
-        // Swal.fire(
-        //     'Good job!',
-        //     'You clicked the button!',
-        //     'success'
-        // );
+        // Swal.fire({
+        //     position: 'center',
+        //     icon: 'success',
+        //     title: 'Your work has been saved',
+        //     showConfirmButton: false,
+        //     timer: 1500
+        // })
 
         location.pathname = "/paginas/usuarios.html";
     }

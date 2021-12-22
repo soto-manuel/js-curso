@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html body{
     background-color: white;
 }
@@ -19,10 +25,6 @@ nav div div ul li{
 .tamaño-img-index{
     margin: 5rem 0rem;
 }
-/* .img-locker{
-    height: 26rem;
-    width: 28rem;
-} */
 .titulo-caja{
     display: flex;
     flex-direction: column;
@@ -67,4 +69,63 @@ nav div div ul li{
     font-family: monospace;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+
+/* PÁGINA USER'S */
+
+#listaUser {
+    padding-left: 0.3rem;
+    padding-right: 0.2rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+#listaUser h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 900;
+}
+#listaUser div{
+    height: 3.3rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#listaUser div ul{
+    padding: 0;
+}
+#listaUser div ul li{
+    list-style-type: none;
+}
+
+.imagen-new{
+    width: 55px;
+    position: absolute;
+    left: 31rem;
+    bottom: 36rem;
+    transform: rotate(10deg);
+}
+
+#listaProcesados{
+    padding-left: 0.3rem;
+    padding-right: 0.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+    left: 27rem;
+    font-size: 1.3rem;
+}
+#listaProcesados h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 900;
+}
+.datosProcesados{
+    color: white;
+    background-color: black;
+    height: 3.3rem;
+    margin-top: 0.5rem;
 }
