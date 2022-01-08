@@ -18,7 +18,7 @@ function botonAgregarData() {
                 `);
             }
             $("#listaProcesados").prepend(`
-                    <h3>Lista de información</h3>
+                    <h3>Información</h3>
                 `);
         }
     });
@@ -39,5 +39,5 @@ function botonQuitarData() {
         $("#listaProcesados").remove();
         $("#quitarData").remove();
     })
-    botonAgregarData();
+
 }

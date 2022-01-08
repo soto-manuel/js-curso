@@ -1,11 +1,14 @@
     console.log("INICIO");
 
 
-// const usuarioRegistrado = []
 
 
 let regresar = document.getElementById('reiniciar');
 let formID = document.getElementById('formID');
+
+
+
+
 
 function enviado (e){
     e.preventDefault()
@@ -20,36 +23,81 @@ function enviado (e){
 
     else if((nameTag === "")||(password=== "")||(passwordDos==="")){
         $("#intentarNuevamente")[0].innerHTML = '<p style="color:red;"> No deje espacios en blanco </p>'
-    } else{
+
+    } else {
 
         let usuario = {nameTag, password}
         let storageArray = JSON.parse(localStorage.getItem("usuarios"))
+
         if(storageArray){
             storageArray.push(usuario);
             localStorage.setItem('usuarios', JSON.stringify(storageArray));
-        } else{
+        }
+        // else if(storageArray.find(nameTag => nameTag === usuario[nameTag])){
+        //     $("#intentarNuevamente")[0].innerHTML = '<p style="color:red;"> USUARIO EXISTENTE </p>'
+        // }
+        else{
             let array2 = []
             array2.push(usuario);
             localStorage.setItem('usuarios', JSON.stringify(array2));
         }
         
-        // Swal.fire({
-        //     position: 'center',
-        //     icon: 'success',
-        //     title: 'Your work has been saved',
-        //     showConfirmButton: false,
-        //     timer: 1500
-        // })
+        console.log(storageArray);
+
 
         location.pathname = "/paginas/usuarios.html";
     }
-
 }
+
+
+
+
+
+
+// CREO FUNCION NUEVA O REUTILIZO LA ANTERIOR
+function userExist(nameTag){
+    return array2.some(function(el){
+        return el.nameTag === nameTag;
+    });
+}
+
+function usuarioRepetido(){
+    if (storageArray.includes(usuario)){
+        $("#intentarNuevamente")[0].innerHTML = '<p style="color:red;"> NO EXISTE </p>'
+    }
+    else {
+        console.log("in else");
+        array2.push(usuario);
+        localStorage.setItem('usuarios', JSON.stringify(array2));
+    }
+};
+
+
+
+
 
 $("#formID").submit(enviado);
 
+// let usuario = {nameTag, password}
+//         let storageArray = JSON.parse(localStorage.getItem("usuarios"))
+        
+
+//         if (storageArray){
+//             storageArray.push(usuario);
+//             localStorage.setItem('usuarios', JSON.stringify(storageArray));
+//             console.log(storageArray);
+//         }
+//         else if(storageArray.includes(usuario)){
+//             $("#intentarNuevamente").innerHTML = '<p style="color:red;"> NO EXISTE </p>'
+//         }
+//         else{
+//             let array2 = []
+//             array2.push(usuario);
+//             localStorage.setItem('usuarios', JSON.stringify(array2));
+//         }
 
 
 
 
-    console.log("FIN");
+
+console.log("FIN");

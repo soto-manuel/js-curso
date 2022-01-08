@@ -19,7 +19,6 @@ mostrarUsuarios();
 
 function animacionNuevoUsuario() {
     let animarUsuario = localStorage.getItem("usuarios", JSON.stringify["nameTag"])
-    // console.log(animarUsuario)
     $("#listaUser").append('<img id="animacion" style="display:none;" class="imagen-new" src="../images/nuevo.png">');
     $("#animacion").fadeIn(2000);
     $("#animacion").fadeOut(3000);

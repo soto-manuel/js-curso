@@ -23,7 +23,7 @@ nav div div ul li{
 }
 
 .tamaño-img-index{
-    margin: 5rem 0rem;
+    margin: 4.96rem 0rem;
 }
 .titulo-caja{
     display: flex;
@@ -32,15 +32,17 @@ nav div div ul li{
     justify-content: center;
 }
 .titulos-index{
+    color: white;
+    background-color: #0d254b;
     font-size: 1.2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     height: 4rem;
-    margin: 1rem 0rem;
+    margin: 1rem 4rem;
     text-align: justify;
     justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
+    align-items: center ;
+    border-radius: 0.2rem;
 }
 .section-carrusel{
     margin-top: 1rem;
@@ -50,15 +52,19 @@ nav div div ul li{
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-bottom: 0.3rem;
 }
 .carrusel-index{
-    width: 50rem;
-    height: 28rem;
+    width: 85rem;
+    height: 48rem;
 }
 
 
-
-
+#seguirBajando{
+    width: 2.2rem;
+    position: relative;
+    bottom: 0.6rem;
+}
 
 /*       PAGINA CREAR CUENTA      */
 
@@ -104,7 +110,7 @@ nav div div ul li{
     width: 55px;
     position: absolute;
     left: 31rem;
-    bottom: 36rem;
+    bottom: 37rem;
     transform: rotate(10deg);
 }
 
