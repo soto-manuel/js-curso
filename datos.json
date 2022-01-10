@@ -1,10 +1,5 @@
 [
-    { "usuario": "N° 1", "name": "manu"},
-    { "usuario": "N° 2", "name": "loro"},
-    { "usuario": "N° 3", "name": "koko"},
-    { "usuario": "N° 4", "name": "mato"},
-    { "usuario": "N° 5", "name": "tara"},
-    { "usuario": "N° 6", "name": "tadeo"},
-    { "usuario": "N° 7", "name": "horacio"},
-    { "usuario": "N° 8", "name": "pehuajo"}
+    {"name":"Paso 1:", "texto":"Para poder proteger la cuenta, siempre recomendamos, no darle la contraseña ni datos personales a ningún tipo de persona."},
+    {"name":"Paso 2:", "texto":"También es óptimo tener un metodo para recuperar la contraseña, ya sea, mediante un telefono celular, otro email conocido que puedas tener acceso o una seguidilla de 12 palabras al azar. "},
+    {"name":"Paso 3:", "texto":"Teniendo en cuenta estas recomendaciones ya tienes una cuenta protegida."}
 ]

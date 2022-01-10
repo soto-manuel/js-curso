@@ -13,12 +13,12 @@ function botonAgregarData() {
             for(const dato of misDatos){
                 $("#listaProcesados").append(`
                     <div class="datosProcesados">
-                        <p>${dato.usuario} ${dato.name}</p>
+                        <p>${dato.name} ${dato.texto}</p>
                     </div>
                 `);
             }
             $("#listaProcesados").prepend(`
-                    <h3>Información</h3>
+                    <h3>Recomendaciones</h3>
                 `);
         }
     });

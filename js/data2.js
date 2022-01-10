@@ -1,6 +1,3 @@
-
-// let botonDown = document.getElementById("seguirBajando")
-
 $("#seguirBajando").click((e)=>{
     e.preventDefault(); 
     
